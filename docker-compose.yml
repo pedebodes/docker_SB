@@ -6,4 +6,7 @@ services:
             - "5000:5000"
         volumes:
             - .:/code
-    
+networks:
+  default:
+    external:
+      name: oratopg_dbnet
