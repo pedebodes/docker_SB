@@ -3,11 +3,12 @@ from flask import Flask
 
 app = Flask(__name__)
 
-@app.route('/')
+
+@app.route("/")
 def hello():
 
-    return 'This Compose/Flask demo has been viewed 9999 '
+    return "flask teste 123"
 
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0",port=1000, debug=True)
+    app.run(host="0.0.0.0", debug=True)

@@ -1,4 +1,6 @@
 OLD/*
 repositorios/*
 oracle/*
-
+*.pyc
+.vscode/*
+log.txt
