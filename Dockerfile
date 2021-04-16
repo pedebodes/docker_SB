@@ -12,7 +12,4 @@ RUN pip install --upgrade pip
 RUN cd repositorios/sbenv/src && chmod +x setup.sh && ./setup.sh
 RUN pip install wheel gunicorn
 
-# CMD ["python", "app.py"]
-
-# CMD ["/usr/local/bin/gunicorn", "--config", "gunicorn_config.py" , "repositorios.portal.web.runserver:app"]
-CMD ["/usr/local/bin/gunicorn", "--config", "gunicorn_config.py" , "runserver:app"]
+CMD ["/usr/local/bin/gunicorn", "--config", "gunicorn_config.py" , "runserver:application"]

@@ -3,10 +3,13 @@ version: '3.7'
 services:
     web:
       build: .
+      ports:
+          - "5000:5000"
       volumes:
           - .:/code
       networks:
-          - sb_portal    
+          - rede_oratopg 
+          - sb_portal   
            
     proxy:
       
@@ -14,7 +17,7 @@ services:
         context:  ./nginx
         dockerfile: Dockerfile
       ports:
-        - "8180:80"
+        - "80:80"
       links:
         - web
       depends_on:
@@ -23,7 +26,7 @@ services:
         - sb_portal    
 
 networks:
-  default:
+  rede_oratopg:
     external:
       name: oratopg_dbnet
   sb_portal:
