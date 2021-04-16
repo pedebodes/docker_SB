@@ -7,7 +7,7 @@ worker_connections = 300  # número máximo de clientes simultâneos que um úni
 keepalive = (
     2  # O número de segundos de espera para a próxima solicitação em uma conexão HTTP
 )
-# threads = 5
+threads = 5
 
 spew = False
 

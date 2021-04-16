@@ -10,6 +10,6 @@ RUN mkdir -p /superbuy/temp/
 
 RUN pip install --upgrade pip
 RUN cd repositorios/sbenv/src && chmod +x setup.sh && ./setup.sh
-RUN pip install wheel gunicorn
+RUN pip install wheel gunicorn futures
 
 CMD ["/usr/local/bin/gunicorn", "--config", "gunicorn_config.py" , "runserver:application"]
