@@ -13,7 +13,3 @@ from newsuperbuy import app
 from newsuperbuy.proxy_fix import ProxyFix
 
 application = ProxyFix(app)
-
-
-# if __name__ == "__main__":
-#     app.run()
