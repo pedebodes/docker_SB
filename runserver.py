@@ -1,6 +1,5 @@
 import sys
 
-# sys.path.insert(0, "/superbuy/deploy/sbflaskapps")
 sys.path.insert(0, "repositorios/portal/web")
 
 import os
